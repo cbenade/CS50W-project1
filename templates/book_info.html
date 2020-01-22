@@ -27,7 +27,7 @@
     <div>
         {% if data.reviews|length > 0 %}
             {% for review in data.reviews %}
-                <div class="col-3 review_block">
+                <div class="col-12 review_block">
                     <h4>Review by "{{review.username}}" ({{ review.rating }} out of 5)</h3>
                     <div style="overflow-wrap: break-word;">"{{ review.text }}"</div>
                 </div>

@@ -9,7 +9,7 @@
     <div>Search string: "{{ search_string }}"</div>
     <div>
         {% if results|length > 0 %}
-            <ul>
+            <ul id="search_results_list">
                 {% for book in results %} 
                     <li style="margin-bottom: 1px;">
                         <a href="{{ url_for('search_book', isbn=book.isbn) }}">

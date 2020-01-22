@@ -26,6 +26,9 @@ Session(app)
 engine = create_engine(os.getenv("DATABASE_URL"))
 db = scoped_session(sessionmaker(bind=engine))
 
+# Website host location
+host_url = "https://cbenadebookreview.herokuapp.com"
+
 
 ##################################################################################################################
 @app.route("/api/<isbn>")
@@ -190,7 +193,7 @@ def search_book(isbn):
     # User requested page via GET
     else:
         # Retrieve book info from api
-        res = requests.get("https://cbenadebookreview.herokuapp.com/api/" + isbn)
+        res = requests.get(host_url + "/api/" + isbn)
         if not res:
             return "Error, invalid isbn number"
         data = res.json()
