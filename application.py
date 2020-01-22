@@ -205,12 +205,12 @@ def search_book(isbn):
         if len(db_result) > 0:
             for review in db_result:
                 reviews.append({
-                    "id": review["id"],
+                    "id": review[0],
                     "username": review["username"],
                     "rating": review["rating"],
                     "text": review["text"]
                 })
-        # Sort reviews by id in reverse order
+        # Sort reviews by review id in reverse order
         reviews = sorted(reviews, key = lambda i: i['id'], reverse=True)    
         # Add reviews to data
         data["reviews"] = reviews
