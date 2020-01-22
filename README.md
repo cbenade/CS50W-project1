@@ -8,12 +8,12 @@ The site is currently being hosted on Heroku and is accessible via this [link](h
 Below are some brief explanations for each significant project file or folder contained in this repository: 
 * [static](https://github.com/cbenade/CS50W-project1/tree/master/static): Folder containing stylesheet files for formatting the book review website
 * [templates](https://github.com/cbenade/CS50W-project1/tree/master/templates): Folder containing html template files served to the user via the Flask application
-    *[book_info.html](https://github.com/cbenade/CS50W-project1/blob/master/templates/book_info.html): Detailed book information page, users can view and post book-specific reviews at this location
-    *[index.html](https://github.com/cbenade/CS50W-project1/blob/master/templates/index.html): Main search-entry page that the user is taken to upon successful login
-    *[layout.html](https://github.com/cbenade/CS50W-project1/blob/master/templates/layout.html): Common HTML extracted out from each page's individual code
-    *[login.html](https://github.com/cbenade/CS50W-project1/blob/master/templates/login.html): Login page where user is able to sign in   
-    *[register.html](https://github.com/cbenade/CS50W-project1/blob/master/templates/register.html): Registration page where user is able to create their own individual account
-    *[search.html](https://github.com/cbenade/CS50W-project1/blob/master/templates/search.html): Dynamic page that is generated for the user via database information matching the users previous search pattern 
+    * [book_info.html](https://github.com/cbenade/CS50W-project1/blob/master/templates/book_info.html): Detailed book information page, users can view and post book-specific reviews at this location
+    * [index.html](https://github.com/cbenade/CS50W-project1/blob/master/templates/index.html): Main search-entry page that the user is taken to upon successful login
+    * [layout.html](https://github.com/cbenade/CS50W-project1/blob/master/templates/layout.html): Common HTML extracted out from each page's individual code
+    * [login.html](https://github.com/cbenade/CS50W-project1/blob/master/templates/login.html): Login page where user is able to sign in   
+    * [register.html](https://github.com/cbenade/CS50W-project1/blob/master/templates/register.html): Registration page where user is able to create their own individual account
+    * [search.html](https://github.com/cbenade/CS50W-project1/blob/master/templates/search.html): Dynamic page that is generated for the user via database information matching the users previous search pattern 
 * [application.py](https://github.com/cbenade/CS50W-project1/blob/master/application.py): Code containing instructions for the web application server. Instructs the server how to retrieve database information and generate dynamic web pages based on the users information and requests. Information served to the user is determined via URL requests and on this server an API tool has been included for other developers to request book-specific information.
 * [books.csv](https://github.com/cbenade/CS50W-project1/blob/master/books.csv): Source file used to populate database book/author information. Only books contained in this file will appear on cbenadebookreview searches
 * [helpers.py](https://github.com/cbenade/CS50W-project1/blob/master/helpers.py): File containing login decorator forcing users to login to the website before accessing specific book review information
