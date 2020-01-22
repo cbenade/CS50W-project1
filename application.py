@@ -124,8 +124,7 @@ def register():
                     "INSERT INTO users (username, hash) VALUES (:username, :hash)", 
                     {"username": request.form.get("username"), "hash": pass_hash})        
                 db.commit()
-                flash(f'''registered user \"{request.form.get("username")}\" with 
-                      password \"{request.form.get("password1")}\"''')
+                flash(f'registered user \"{request.form.get("username")}\"')
             else:
                 # Notify user that username is taken
                 flash('that username is taken')            
