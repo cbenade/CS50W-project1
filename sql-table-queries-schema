@@ -1,0 +1,25 @@
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR NOT NULL,
+    hash VARCHAR NOT NULL
+);
+
+CREATE TABLE authors (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR NOT NULL
+);
+
+CREATE TABLE books (
+    isbn VARCHAR PRIMARY KEY,
+    title VARCHAR NOT NULL,
+    author_id INTEGER REFERENCES authors,
+    year VARCHAR
+);
+
+CREATE TABLE reviews (
+    id SERIAL PRIMARY KEY,
+    book_id VARCHAR REFERENCES books,
+    user_id INTEGER REFERENCES users,
+    rating DECIMAL NOT NULL,
+    text VARCHAR NOT NULL
+);

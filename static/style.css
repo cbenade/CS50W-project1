@@ -1,0 +1,40 @@
+h1, h3, h4, div {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+h1 form div, h3 form div, h4 form div, div form div {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+h1 form div input, h3 form div input, h4 form div input, div form div input {
+  width: 200px;
+}
+h1 form div #rating, h3 form div #rating, h4 form div #rating, div form div #rating {
+  margin-right: 290px;
+  width: 60px;
+}
+h1 form div #text, h3 form div #text, h4 form div #text, div form div #text {
+  margin-right: 50px;
+  width: 300px;
+  height: 100px;
+}
+h1 ul, h3 ul, h4 ul, div ul {
+  margin-left: 30%;
+  text-align: left;
+}
+
+h2 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.review_block {
+  border-style: solid;
+  border-width: 1px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*# sourceMappingURL=style.css.map */

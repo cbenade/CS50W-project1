@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Search
+{% endblock %}
+
+{% block body %}
+    <h1>Search Results Page</h1>
+    <div>Search string: "{{ search_string }}"</div>
+    <div>
+        {% if results|length > 0 %}
+            <ul>
+                {% for book in results %} 
+                    <li style="margin-bottom: 1px;">
+                        <a href="{{ url_for('search_book', isbn=book.isbn) }}">
+                            "{{ book.title }}" by {{ book.author }}, ISBN # {{ book.isbn }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <span>No matches</span>
+        {% endif %}
+    </div>
+    <div>
+        <a class="btn btn-warning" href="{{ url_for('index') }}" role="button">Go back to search page</a>
+    </div>
+{% endblock %}

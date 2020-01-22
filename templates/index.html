@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Search
+{% endblock %}
+
+{% block body %}
+    <h1>Search Page</h1>
+    <div>
+        Search for a book or author!
+    </div>
+    <div>
+        <form action="{{ url_for('search') }}" method="post">
+            <div>
+                <input type="text" name="search" placeholder="isbn / title / author" autocomplete="off">
+            </div>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    <div>
+        <a class="btn btn-danger" href="{{ url_for('logout') }}" role="button">Log out</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,45 @@
+$m1: 20px;
+$m2: 15px;
+$m3: 30px;
+$m4: 8px;
+
+h1, h3, h4, div {
+    margin-top: $m2;
+    margin-bottom: $m2;
+    text-align: center;
+    form {
+        div {
+            margin-top: $m4;
+            margin-bottom: $m4;
+            input {
+                width: 200px;
+            }
+            #rating {
+                margin-right: 290px;
+                width: 60px;
+            }
+            #text {
+                margin-right: 50px;
+                width: 300px;
+                height: 100px;
+            }
+        }
+    }
+    ul {
+        margin-left: 30%;
+        text-align: left;
+    }
+}
+
+h2 {
+    margin-top: $m3;
+    margin-bottom: $m1;
+    text-align: center;
+}
+
+.review_block {
+    border-style: solid; 
+    border-width: 1px;
+    margin-left: auto;
+    margin-right: auto;
+}

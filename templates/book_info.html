@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{ data.title }}
+{% endblock %}
+
+{% block body %}
+    <h1>{{ data.title }}</h1>
+    <div>
+        Author: {{data.author}}
+    </div>
+    <div>
+        Year: {{data.year}}
+    </div>
+    <div>
+        ISBN: {{data.isbn}}
+    </div>
+    <div>
+        Review Count on Goodreads: {{data.review_count}}
+    </div>
+    <div>
+        Average Score on Goodreads: {{data.average_score}}
+    </div>
+    <h2>
+        User reviews
+    </h2>
+    <div>
+        {% if data.reviews|length > 0 %}
+            {% for review in data.reviews %}
+                <div class="col-3 review_block">
+                    <h4>Review by "{{review.username}}" ({{ review.rating }} out of 5)</h3>
+                    <div style="overflow-wrap: break-word;">"{{ review.text }}"</div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div>Be the first to review {{ data.title }}!</div>
+        {% endif %}
+    </div>
+    <h2 style="margin-bottom: 0;">Submit your review</h2>
+    <div style="font-size: small; margin-bottom: 15px;">
+        (One review per-book per-user, submitting a new review will overwrite user's existing submission)
+    </div>
+    <div>
+        <form action="{{ url_for('search_book', isbn=data.isbn) }}" method="post">
+            <div>
+                <span style="margin-right: 5px;">Rating: </span>
+                <input type="number" required id="rating" name="rating" placeholder="rating" min="0" max="5" step="0.5" autocomplete="off">
+            </div>
+            <div>
+                <span style="vertical-align: top; line-height: 30px;">Review: </span>
+                <textarea required id="text" name="text" placeholder="text" autocomplete="off"></textarea>
+            </div>
+            <button type="submit">Submit review</button>
+        </form>
+    </div>
+    <div>
+        <a class="btn btn-warning" href="{{ url_for('index') }}" role="button">Go back to search page</a>
+    </div>
+{% endblock %}
