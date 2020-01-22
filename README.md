@@ -3,11 +3,11 @@ My Project 1 assignment is a simple book review website that uses both informati
 
 Though users are required to register and login before viewing the sites main features, an API route has been created for developers wishing to recieve JSON packages of data pertaining to the sites book review data. 
 
-The site is currently being hosted on Heroku and is accessible via this [link](https://dashboard.heroku.com/apps/cbenadebookreview).
+The site is currently being hosted on Heroku and is accessible via this [link](https://cbenadebookreview.herokuapp.com/).
 
 Below are some brief explanations for each significant project file or folder contained in this repository: 
-* [static](https://github.com/cbenade/CS50W-project1/tree/master/static): Folder containing stylesheet files for formatting the book review website
-* [templates](https://github.com/cbenade/CS50W-project1/tree/master/templates): Folder containing html template files served to the user via the Flask application
+* [static/](https://github.com/cbenade/CS50W-project1/tree/master/static): Folder containing stylesheet files for formatting the book review website
+* [templates/](https://github.com/cbenade/CS50W-project1/tree/master/templates): Folder containing html template files served to the user via the Flask application
     * [book_info.html](https://github.com/cbenade/CS50W-project1/blob/master/templates/book_info.html): Detailed book information page, users can view and post book-specific reviews at this location
     * [index.html](https://github.com/cbenade/CS50W-project1/blob/master/templates/index.html): Main search-entry page that the user is taken to upon successful login
     * [layout.html](https://github.com/cbenade/CS50W-project1/blob/master/templates/layout.html): Common HTML extracted out from each page's individual code
