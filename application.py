@@ -190,7 +190,7 @@ def search_book(isbn):
     # User requested page via GET
     else:
         # Retrieve book info from api
-        res = requests.get("http://127.0.0.1:5000/api/" + isbn)
+        res = requests.get("https://cbenadebookreview.herokuapp.com/api/" + isbn)
         if not res:
             return "Error, invalid isbn number"
         data = res.json()

@@ -1,4 +1,8 @@
 Flask
 Flask-Session
+Jinja2
 psycopg2-binary
+requests
 SQLAlchemy
+Werkzeug
+wrapt
