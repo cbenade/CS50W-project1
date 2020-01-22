@@ -1,5 +1,6 @@
 Flask
 Flask-Session
+gunicorn
 Jinja2
 psycopg2-binary
 requests
